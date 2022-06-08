@@ -3,6 +3,14 @@
 $server = 'localhost';
 $username = 'root';
 $password = "";
-$db = "votingapp";
+$db = "vottingapp";
 
-$dbConnection = mysqli_connect($server,$username,$password,$db);
+$response = [];
+
+try{
+$dbConnection = mysqli_connect($server,$username,$password,$db) ;
+
+} catch(Error ) {
+    $response['message'] = 'Error';
+}
+
