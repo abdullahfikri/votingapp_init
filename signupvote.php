@@ -6,6 +6,7 @@ $email = $_POST[ 'email'];
 $password = $_POST['password'];
 $namalengkap = $_POST['namalengkap'];
 $nik = $_POST['nik'];
+$nomorhp = $_POST['nomorhp'];
 $tempattinggal = $_POST['tempattinggal'];
 
 $response = [];
@@ -14,7 +15,7 @@ $response = [];
 
 try{
 
-  if($email !='' && $password != '' && $namalengkap != '' && $nik !='' && $tempattinggal != '' ){
+  if($email !='' && $password != '' && $namalengkap != '' && $nik !='' && $tempattinggal != '' && $nomorhp !='' ){
 
 
     // UPLOAD IMAGE BEGIN
@@ -36,7 +37,7 @@ try{
               $url = $ip_server.$folder_root.$target_file;
 
               // Query insert
-              $query = "INSERT INTO `users`(`email`, `password`, `nik`, `namalengkap`, `tempattinggal`, `imgurl`) VALUES ('$email','$password',$nik,'$namalengkap','$tempattinggal','$url')";
+              $query = "INSERT INTO `users`(`email`, `password`, `nik`, `namalengkap`, `tempattinggal`, `nomorhp`, `imgurl`) VALUES ('$email','$password',$nik,'$namalengkap','$tempattinggal', '$nomorhp','$url')";
               // Eksekusi query
               $execute = mysqli_query($dbConnection,$query);
 
