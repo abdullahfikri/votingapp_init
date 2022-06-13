@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 13, 2022 at 06:55 PM
+-- Generation Time: Jun 14, 2022 at 01:54 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.5
 
@@ -90,8 +90,6 @@ INSERT INTO `pemilih` (`id`, `idkandidat`, `iduser`) VALUES
 (11, 1, 22),
 (12, 2, 23),
 (13, 3, 6),
-(14, 3, 8),
-(15, 2, 21),
 (16, 3, 24),
 (17, 1, 27),
 (18, 3, 20),
@@ -101,14 +99,14 @@ INSERT INTO `pemilih` (`id`, `idkandidat`, `iduser`) VALUES
 (22, 3, 39),
 (23, 3, 38),
 (24, 2, 37),
-(25, 3, 37),
 (26, 2, 36),
 (27, 2, 35),
-(28, 2, 35),
 (29, 2, 34),
 (30, 2, 33),
 (31, 1, 18),
-(32, 1, 41);
+(32, 1, 41),
+(33, 2, 19),
+(34, 1, 42);
 
 -- --------------------------------------------------------
 
@@ -134,33 +132,34 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `password`, `nik`, `namalengkap`, `nomorhp`, `statusvoting`, `tempattinggal`, `imgurl`) VALUES
 (5, 'test@localhost.com', '1234', '1122334455', 'SI Tester', '08712312', 0, 'Jl. Tester, Arizona', 'http://10.0.2.2/votingapp/images/4629Cat03.jpg'),
-(6, 'fikri@localhost.com', '1234', '11323231231', 'Muhammad Fikri', '', 0, 'Jl. Pemuda, Pekanbaru', 'http://10.0.2.2/votingapp/images/7445pexels-pixabay-417173.jpg'),
-(7, 'admin@localhost.com', 'admin', '0', 'Admin', '', 0, 'Jl. 0000, Pekanbaru', 'http://10.0.2.2/votingapp/images/5798tester.jpg'),
+(6, 'fikri@localhost.com', '1234', '11323231231', 'Muhammad Fikri', '', 1, 'Jl. Pemuda, Pekanbaru', 'http://10.0.2.2/votingapp/images/7445pexels-pixabay-417173.jpg'),
+(7, 'admin@localhost.com', 'admin', '1', 'Admin', '', 0, 'Jl. 0000, Pekanbaru', 'http://10.0.2.2/votingapp/images/5798tester.jpg'),
 (8, 'zul', 'zul', '2131233', 'Zul Hilmi', '081232131', 1, 'Jl. Pemuda, Pekanbaru', 'http://10.0.2.2/votingapp/images/8937mount.jpg'),
-(18, 'mfikri@gmail.com', '12345', '1234431413', 'Muhammad Fikri', '08136666780', 0, 'JL Pemuda no 21 Pekanbaru', 'http://10.0.2.2/votingapp/images/3128IMG_20220611_160551.jpg'),
-(19, 'vicky.keeling@tillman.biz', '123451', '00000000001', 'unit test', '081155555', 0, 'jalan lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(20, 'ralph.hills@klocko.com', '123456', '00000000001', 'unit 2', '0813210123', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(21, 'sbradtke@wisoky.com', '123123', '000000000021', 'unit 3', '00000000', 0, 'lorem 123', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(22, 'dooley.tyrel@yahoo.com', '1232131', '0000000123', 'unit 4', '0000000000', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(23, 'elena75@langworth.com', '123456', '00000000123', 'elena', '0812313132', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(24, 'lemke.stephanie@collins.com', '12321321312', '11111111111123', 'lemke', '0812321312321', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(18, 'mfikri@gmail.com', '12345', '1234431413', 'Muhammad Fikri', '08136666780', 1, 'JL Pemuda no 21 Pekanbaru', 'http://10.0.2.2/votingapp/images/3128IMG_20220611_160551.jpg'),
+(19, 'vicky.keeling@tillman.biz', '123451', '00000000001', 'unit test', '081155555', 1, 'jalan lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(20, 'ralph.hills@klocko.com', '123456', '00000000001', 'unit 2', '0813210123', 1, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(21, 'sbradtke@wisoky.com', '123123', '000000000021', 'unit 3', '00000000', 1, 'lorem 123', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(22, 'dooley.tyrel@yahoo.com', '1232131', '0000000123', 'unit 4', '0000000000', 1, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(23, 'elena75@langworth.com', '123456', '00000000123', 'elena', '0812313132', 1, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(24, 'lemke.stephanie@collins.com', '12321321312', '11111111111123', 'lemke', '0812321312321', 1, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
 (25, 'okuneva.destiney@bernier.net', '1231321', '1111111111102', 'okuneva', '12321312', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
 (26, 'zack88@abshire.com', '12312312', '2222222222123', 'zack', '321331321312', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(27, 'lnitzsche@yahoo.com', '12312312', '23333333131', 'initz', '1233333333312', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(27, 'lnitzsche@yahoo.com', '12312312', '23333333131', 'initz', '1233333333312', 1, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
 (28, 'kobe17@reinger.org', '12312451', '11111111123', 'kobe', '092183012321', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
 (29, 'nhudson@spencer.com', '12321312', '111111112321', 'nhudson', '084102023', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(30, 'morissette.lawson@bartell.com', '111', '1111123131', 'mori', '02313123213', 0, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(30, 'morissette.lawson@bartell.com', '111', '1111123131', 'mori', '02313123213', 1, 'lorem', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
 (31, 'adolfo15@hotmail.com', '123123', '1111111123212', 'adolf', '08712312', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
 (32, 'remington.cummings@bartell.com', '1231', '1231321', 'remin', '02313123213', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(33, 'elvera.bechtelar@yahoo.com', '1231', '00000000002121', 'elve', '000000001231', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(34, 'kutch.eldora@ruecker.com', '12312', '00000001231231', 'kutch', '1233412312', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(35, 'shields.mitchel@boehm.net', '1231231', '23131', 'shild', '', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(36, 'zcorwin@gmail.com', '123123', '1231312312312', 'zcor', '08123213123223', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(37, 'bkertzmann@bruen.org', '12313212313', '11111111111021213', 'kertz', '093412231', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(38, 'greenholt.niko@schaefer.org', '12312', '22222222221232', 'gren', '083123121', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(39, 'breichert@moore.com', '12312312', '321312312312', 'briac', '09823412312', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(33, 'elvera.bechtelar@yahoo.com', '1231', '00000000002121', 'elve', '000000001231', 1, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(34, 'kutch.eldora@ruecker.com', '12312', '00000001231231', 'kutch', '1233412312', 1, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(35, 'shields.mitchel@boehm.net', '1231231', '23131', 'shild', '', 1, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(36, 'zcorwin@gmail.com', '123123', '1231312312312', 'zcor', '08123213123223', 1, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(37, 'bkertzmann@bruen.org', '12313212313', '11111111111021213', 'kertz', '093412231', 1, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(38, 'greenholt.niko@schaefer.org', '12312', '22222222221232', 'gren', '083123121', 1, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
+(39, 'breichert@moore.com', '12312312', '', 'briac', '09823412312', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
 (40, 'reichel.angie@yahoo.com', '12313', '11111111123231', 'riecel', '09218301232121', 0, 'test', 'http://10.0.2.2/votingapp/images/users/default.jpg'),
-(41, 'abdullah@gmail.com', '123456', '213123123', 'Abdullah bin Fulan bin Fulan', '081368123123', 1, 'Jln. Pemuda no 10, Pekanbaru', 'http://10.0.2.2/votingapp/images/6430IMG_20220611_160606.jpg');
+(41, 'abdullah@gmail.com', '123456', '213123123', 'Abdullah bin Fulan bin Fulan', '081368123123', 1, 'Jln. Pemuda no 10, Pekanbaru', 'http://10.0.2.2/votingapp/images/6430IMG_20220611_160606.jpg'),
+(42, 'rage@local.com', '12345', '111111111123', 'Rage', '0812351231', 1, 'JL Adi, Pekanbaru', 'http://10.0.2.2/votingapp/images/3715IMG_20220611_160551.jpg');
 
 -- --------------------------------------------------------
 
@@ -244,13 +243,13 @@ ALTER TABLE `kandidat`
 -- AUTO_INCREMENT for table `pemilih`
 --
 ALTER TABLE `pemilih`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `wagub`

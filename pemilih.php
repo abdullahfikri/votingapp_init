@@ -25,8 +25,14 @@ if($check > 0) {
         $sql = "UPDATE `users` SET `statusvoting`='1' WHERE id = '$idUser'";
         mysqli_query($dbConnection, $sql);
 
+        $sql = "SELECT * FROM users WHERE id = '$idUser'";
+        $execute = mysqli_query($dbConnection, $sql);
+        $row = mysqli_fetch_assoc($execute);
+
+
         $response["status"] = "success";
         $response["message"] = "Berhasil memilih kandidat"; 
+        $response["data"] = $row;
     }
     else{
     $response["status"] = "failed";
